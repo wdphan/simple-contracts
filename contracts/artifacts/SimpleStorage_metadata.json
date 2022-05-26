@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "retrieve",
+				"name": "get",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -22,35 +22,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "num",
+						"name": "x",
 						"type": "uint256"
 					}
 				],
-				"name": "store",
+				"name": "set",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
-			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
-			"details": "Store & retrieve value in a variable",
 			"kind": "dev",
-			"methods": {
-				"retrieve()": {
-					"details": "Return value ",
-					"returns": {
-						"_0": "value of 'number'"
-					}
-				},
-				"store(uint256)": {
-					"details": "Store value in variable",
-					"params": {
-						"num": "value to store"
-					}
-				}
-			},
-			"title": "Storage",
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -61,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/1_Storage.sol": "Storage"
+			"contracts/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -75,12 +59,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/1_Storage.sol": {
-			"keccak256": "0x0cce91e0b241d8850bf4ef9d14d0ec8f2f13deb59b5ec164d70ed107e0acb462",
-			"license": "GPL-3.0",
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0x5a8e84664b862210652a50449449d769765abda208ff16fe1f2a2a6640a18795",
 			"urls": [
-				"bzz-raw://ec43708d31356793d9923dcc67345558fc6957e2ac4029b882c2501efcd8eabe",
-				"dweb:/ipfs/QmQQfBMkpDgmxKzYaoAtqfaybzfgGm9b2LWYyT56Chv6xH"
+				"bzz-raw://75e69cf388aa70d5c74ff15b0a774591c7415e7719af16d42e6f73c0e09b99a3",
+				"dweb:/ipfs/QmZFfjgihuN6kkx5C9G9NV87q1obr94BHGyRMkUJhbdz1e"
 			]
 		}
 	},
