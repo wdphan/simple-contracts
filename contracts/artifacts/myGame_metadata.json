@@ -31,6 +31,19 @@
 						"type": "address"
 					}
 				],
+				"name": "changePlayerLevel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "playerAddress",
+						"type": "address"
+					}
+				],
 				"name": "getPlayerLevel",
 				"outputs": [
 					{
@@ -84,6 +97,11 @@
 						"internalType": "string",
 						"name": "lastName",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createdTime",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -103,7 +121,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleGame.sol": "myGame"
+			"contracts/SimpleTime.sol": "myGame"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -117,12 +135,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleGame.sol": {
-			"keccak256": "0x617f51e223484318bb7e3c3c4622eb80aa97a7f4443c6f84a30e63e2777027da",
+		"contracts/SimpleTime.sol": {
+			"keccak256": "0x142bc341c7bb0cb0c66f154edc545c2d711fc00d8aebae17c397e311dd79e70d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0f60d1daebf36638fe00ca9e453998b2c9ab5f83459f7bd09be1816569861e2e",
-				"dweb:/ipfs/QmYuxkRZPtDBfk4WpHxdFSMgKJcecvjnUVzavKX5Y6vmV4"
+				"bzz-raw://58a240e56a1096a74728ebc046d91433f1968a2bdb10bf8c69f84c527ecd20b0",
+				"dweb:/ipfs/QmXVHgfbaWgc7f8mXTg157HzQY1BpN4bToL5rxXDVXRo6A"
 			]
 		}
 	},
