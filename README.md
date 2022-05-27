@@ -52,7 +52,7 @@ The contract has an `addPlayer(string memory firstName, string memory lastName)`
 
 > The Simple Coin contract but with an added time component.
 
-The Simple Coin contraft contains two functions: `mint(address receiver, uint amount)` and `send (address receiver, uint amount)` The `send (address receiver, uint amount)` enables users to send their coins after the contract is open for 30 seconds with the `require(block.timestamp >= contractStartTime + 30)`.
+The Simple Coin contract contains two functions: `mint(address receiver, uint amount)` and `send (address receiver, uint amount)` The `send (address receiver, uint amount)` enables users to send their coins after the contract is open for 30 seconds with the `require(block.timestamp >= contractStartTime + 30)`.
 
 [Contract Source](contracts/SimpleCoin2.sol)
 
@@ -60,6 +60,16 @@ The Simple Coin contraft contains two functions: `mint(address receiver, uint am
 
 > A Simple Auction where everyone can send their bids during a certain bidding period. If the highest bid is raised, the previous highest bidder gets their money back. After the end of the period, the contract is called for the beneficiary to receive their money.
 
-The contract cointains `bid`,`widthdraw`, and `auctionEnd` function. The functions emit `AuctionEnded(highestBidder, highestBid)` and provide events `HighestBidIncrease(address bidder, uint amount)` and `AuctionEnded(address winner, uint amount)`
+The contract contains `bid`,`widthdraw`, and `auctionEnd` function. The functions emit `AuctionEnded(highestBidder, highestBid)` and provide events `HighestBidIncrease(address bidder, uint amount)` and `AuctionEnded(address winner, uint amount)`
+
+[Contract Source](contracts/SimpleAuction.sol)
+
+## Simple Multi-Send
+
+> Basicallt the Simple Game Contract with an entrance fee and function pays the winner.
+
+The Simple Game enables you to add players with the `addPlayer(string memory firstName, string memory lastName)` function and get a players level with the `getPlayerLevel(address playerAddress)` function. The contract contains and enum that allows players to level up: `Level {Novice, Intermediate, Advanced}`
+
+The `joinGame(string memory firstName, string memory lastName)` function requires an entrance fee of 25 ether. If acquired, it will increase player count by 1 and increase the pot by 25 ether. The `payOutWinners(address loserAddress)` function ensures that only the dealer pays out the winners and doesn't pay the loser. The pot is split between the winers with `uint payoutPerWinner = msg.value / (playerCount - 1)`.
 
 [Contract Source](contracts/SimpleAuction.sol)
