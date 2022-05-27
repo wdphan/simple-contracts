@@ -6,6 +6,24 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "dealer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -18,41 +36,22 @@
 						"type": "string"
 					}
 				],
-				"name": "addPlayer",
+				"name": "joinGame",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "playerAddress",
+						"name": "loserAddress",
 						"type": "address"
 					}
 				],
-				"name": "changePlayerLevel",
+				"name": "payOutWinners",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "playerAddress",
-						"type": "address"
-					}
-				],
-				"name": "getPlayerLevel",
-				"outputs": [
-					{
-						"internalType": "enum myGame.Level",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -106,6 +105,58 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "playersInGame",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "playerAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum myGame.Level",
+						"name": "playerLevel",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "firstName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "lastName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createdTime",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pot",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -121,7 +172,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleTime.sol": "myGame"
+			"contracts/SimpleMultSend.sol": "myGame"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -135,12 +186,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleTime.sol": {
-			"keccak256": "0x142bc341c7bb0cb0c66f154edc545c2d711fc00d8aebae17c397e311dd79e70d",
+		"contracts/SimpleMultSend.sol": {
+			"keccak256": "0xe6093a40faaf2464c1666f64a16906313163082167e2db046c4503f1bf4eba62",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://58a240e56a1096a74728ebc046d91433f1968a2bdb10bf8c69f84c527ecd20b0",
-				"dweb:/ipfs/QmXVHgfbaWgc7f8mXTg157HzQY1BpN4bToL5rxXDVXRo6A"
+				"bzz-raw://1eef746c222ab69f0e56519f3729921021fa9226776479b690c19655cee1b3db",
+				"dweb:/ipfs/QmT85QgCvxsSiyX2EhRCGSciFZRB1RNjDmYoupRm6Ny5V6"
 			]
 		}
 	},
