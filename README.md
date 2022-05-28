@@ -66,7 +66,7 @@ The contract contains `bid`,`widthdraw`, and `auctionEnd` function. The function
 
 ## Simple Multi-Send
 
-> Basicallt the Simple Game Contract with an entrance fee and function pays the winner.
+> Basically the Simple Game Contract with an entrance fee and function pays the winner.
 
 The Simple Game enables you to add players with the `addPlayer(string memory firstName, string memory lastName)` function and get a players level with the `getPlayerLevel(address playerAddress)` function. The contract contains and enum that allows players to level up: `Level {Novice, Intermediate, Advanced}`
 
