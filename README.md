@@ -73,3 +73,8 @@ The Simple Game enables you to add players with the `addPlayer(string memory fir
 The `joinGame(string memory firstName, string memory lastName)` function requires an entrance fee of 25 ether. If acquired, it will increase player count by 1 and increase the pot by 25 ether. The `payOutWinners(address loserAddress)` function ensures that only the dealer pays out the winners and doesn't pay the loser. The pot is split between the winers with `uint payoutPerWinner = msg.value / (playerCount - 1)`.
 
 [Contract Source](contracts/SimpleMultSend.sol)
+
+## License
+
+This app is open-source and licensed under the MIT license. For more details, check the [License file](LICENSE).
+
